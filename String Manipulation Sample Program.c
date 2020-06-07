@@ -44,9 +44,6 @@ int main() {
         strncpy(firstPart, names[i], pos);
         strcpy(secondPart, (names[i])+pos+1);
 
-        printf("first: %s\n", firstPart);
-        printf("second: %s\n", secondPart);
-
         strcpy(results[i], secondPart);
         strcat(results[i], ", ");
         strcat(results[i], firstPart);
