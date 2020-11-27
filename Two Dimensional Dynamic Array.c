@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void print2DArray(int row, int col, int M[row][col]);
+
 int main() {
     printf("Hello, World!\n");
 
@@ -17,12 +19,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < col; j++) {
-            printf("%d ", array[i][j]);
-        }
-        printf("\n");
-    }
+    print2DArray(row, col, M);
 
 
     for (int i = 0; i < row; i++) {
@@ -33,3 +30,13 @@ int main() {
     printf("\n\n");
     return 0;
 }
+
+void print2DArray(int row, int col, int M[row][col]) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            printf("%d ", M[i][j]);
+        }
+        printf("\n");
+    }
+}
+    
