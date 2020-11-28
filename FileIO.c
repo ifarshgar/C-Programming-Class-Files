@@ -47,8 +47,6 @@ int main()
     int line;
     char * text;
     while( fscanf(output, "%d %d %100[^\n]", &line, &i, text) != EOF) {
-        //printf("%d %d %s \n", i+1, d[i].id, d[i].text);
-
         printf("%d %d %s \n", line, i, text);
     }
 
