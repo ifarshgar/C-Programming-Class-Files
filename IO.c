@@ -28,7 +28,6 @@ int main()
     // reopening the file to read the data back
     load(FILENAME);
 
-    // getting the second element from the file
     printf("\nTrying to get the first element with random access to the file: \n");
     getPerson(FILENAME, 0);
 
