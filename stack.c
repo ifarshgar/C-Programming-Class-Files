@@ -13,7 +13,7 @@ struct stack{
 void push(char v)
 {
     if(myStack.top == MAX-1)
-        printf("Stack is full");
+        printf("Stack is full!\n");
     else
     {
         myStack.top++;
@@ -25,7 +25,8 @@ char pop()
 {
     if(myStack.top <= -1)
     {
-        printf("\n\t Stack is empty");
+        printf("Stack is empty!\n");
+        return NULL;
     }
     else
     {
@@ -64,7 +65,6 @@ int main()
         {
             if(str[i] >= 'A' && str[i] <= 'Z') {
                 push(str[i]);
-                printf("size: %d\n", size());
             }
             else if(str[i]>= '0' && str[i]<='9')
             {
@@ -72,9 +72,8 @@ int main()
                 for(j=0;j<pos;j++)
                 {
                     char c = pop();
-                    printf("Popped: %c",c);
-                    printf("\n");
-                    printf("size: %d\n", size());
+                    if( c != NULL)
+                        printf("Popped: %c\n",c);
                 }
             }
             else if(str[i] == '$')
