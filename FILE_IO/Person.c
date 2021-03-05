@@ -3,7 +3,7 @@
 #include <string.h>
 #include "Person.h"
 
-void save(const char *fileName, Person *p, int size) {
+void savePerson(const char *fileName, Person *p, int size) {
     // opening a file for writing in write mode
     FILE *fp = fopen(fileName, "a");
     if(fp == NULL) {
@@ -21,7 +21,7 @@ void save(const char *fileName, Person *p, int size) {
     printf("Data saved successfully!\n\n");
 }
 
-Person * load(const char *fileName, int size) {
+Person * loadPerson(const char *fileName, int size) {
     FILE *input = fopen(fileName, "r");
     if( input == NULL ) {
         char msg[100] = "File ";

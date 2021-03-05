@@ -10,6 +10,7 @@ int main() {
 
     file_IO_with_fscanf_and_fprintf();
     file_IO_with_fread_and_fwrite();
+    file_IO_with_fgets_and_fputs();
 
     return 0;
 }

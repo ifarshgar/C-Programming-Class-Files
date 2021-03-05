@@ -9,8 +9,8 @@ struct Person {
     char *city;
 } *person;
 
-void save(const char *fileName, Person *p, int size);
-Person * load(const char *fileName, int size);
+void savePerson(const char *fileName, Person *p, int size);
+Person * loadPerson(const char *fileName, int size);
 void printPerson(Person *p);
 Person * getPerson(const char *fileName, int index);
 

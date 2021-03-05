@@ -58,70 +58,13 @@ void linear_search(char *student_name, int size) {
    printf("\n Student not found!!");
 
 }
-/*
-int main(int argc, char *argv[]) {
-    int cnt = 0;
 
-    FILE *stud_file = fopen("student.txt","r");
-    if(stud_file == NULL) {
-        printf("File not found!\n");
-        exit(1);
-    }
+  /*
 
-    char line[100];
-    while(fgets(line, 100, stud_file) != NULL){
-        if(strcmp(line, "\n") == 0)
-            continue;
 
-        char *token = strtok(line, " ");
-
-        strcpy(s[cnt].studentNo, token);
-        s[cnt].studentNo[4] = '\0';
-
-        token = strtok(NULL, " ");
-        strcpy(s[cnt].name, token);
-
-        token = strtok(NULL, " ");
-        s[cnt].grade = atoi(token);
-
-        cnt++;
-    }
-    fclose(stud_file);
 
     // print everything
     for(int i=0; i<cnt; i++) {
         printf("%s %s %d\n", s[i].studentNo, s[i].name, s[i].grade);
     }
-
-    int choice = 1;
-    while( choice != 3){
-       printf("\n1.Find Student by number.");
-       printf("\n2.Find Student by name.");
-       printf("\n3.Exit.");
-       printf("\nEnter your choice from above: ");
-       scanf("%d", &choice);
-
-       if(choice == 1){
-           char stud_number[5];
-           printf("\nEnter student registration number: ");
-           scanf("%s", stud_number);
-           binary_search(stud_number, cnt);
-           printf("\n=========================\n");
-       }
-
-       else if(choice == 2){
-           char stud_name[10];
-           printf("\nEnter student name: ");
-           scanf("%s", stud_name);
-           linear_search(stud_name, cnt);
-           printf("\n==========================\n");
-       }
-
-       else if(choice == 3){
-           printf("\nGood-bye");
-       }
-    }
-
-    return 0;
 }
-*/
