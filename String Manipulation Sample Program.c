@@ -3,14 +3,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define _MaxSize 100
+#define MaxSize 100
 
-void bubbleSort(char [][_MaxSize], int);
-void printNames(const char [][_MaxSize], int );
-void countVowels(int, char [][_MaxSize]);
+void bubbleSort(char [][MaxSize], int);
+void printNames(const char [][MaxSize], int );
+void countVowels(int, char [][MaxSize]);
 
-int main() {
-    printf("CMPE112 - STRING FUNCTIONS QUESTION PROGRAM\n");
+/*int main() {
+    printf("STRING FUNCTIONS\n");
     printf("-----------------------\n");
 
     printf("Enter the number of people:\n> ");
@@ -21,8 +21,8 @@ int main() {
     char c;
     while ((c = getchar()) != '\n' && c != EOF);
 
-    char buffer[_MaxSize]; // buffer holder
-    char names[size][_MaxSize]; // holds entered names
+    char buffer[MaxSize]; // buffer holder
+    char names[size][MaxSize]; // holds entered names
 
     for(int i=0; i<size; i++) {
         printf("Enter #%d fullname:\n>", i+1);
@@ -32,15 +32,15 @@ int main() {
 
     bubbleSort(names, size);
 
-    char results[size][_MaxSize];   // holds final results
+    char results[size][MaxSize];   // holds final results
 
     for(int i=0; i<size; i++) {
         // finding the space in between of names
         int pos = strchr(names[i], ' ') - names[i];
 
         // recreating the names
-        char firstPart[_MaxSize/2];
-        char secondPart[_MaxSize/2];
+        char firstPart[MaxSize/2];
+        char secondPart[MaxSize/2];
         strncpy(firstPart, names[i], pos);
         strcpy(secondPart, (names[i])+pos+1);
 
@@ -54,9 +54,9 @@ int main() {
     printNames(results, size);
 
     return 0;
-}
+}*/
 
-void countVowels(int size, char results[][_MaxSize]) {
+void countVowels(int size, char results[][MaxSize]) {
     char buffer[20];
     for(int i=0; i < size; i++) {
         int count = 0;
@@ -71,12 +71,12 @@ void countVowels(int size, char results[][_MaxSize]) {
     }
 }
 
-void bubbleSort(char names[][_MaxSize], int size) {// bubble sort
+void bubbleSort(char names[][MaxSize], int size) {// bubble sort
     for(int pass=1; pass<size; pass++) {
         for(int i=0; i<size-1; i++) {
             if(strcmp(names[i], names[i+1]) > 0) {
                 // swapping values
-                char temp[_MaxSize];
+                char temp[MaxSize];
                 strcpy(temp, names[i]);
                 strcpy(names[i], names[i+1]);
                 strcpy(names[i+1], temp);
@@ -85,7 +85,7 @@ void bubbleSort(char names[][_MaxSize], int size) {// bubble sort
     }
 }
 
-void printNames(const char names[][_MaxSize], int size) {
+void printNames(const char names[][MaxSize], int size) {
     for(int i=0; i<size; i++) {
         printf("#%d - %s\n", i+1, names[i]);
     }

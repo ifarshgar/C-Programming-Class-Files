@@ -58,6 +58,7 @@ void linear_search(char *student_name, int size) {
    printf("\n Student not found!!");
 
 }
+/*
 int main(int argc, char *argv[]) {
     int cnt = 0;
 
@@ -123,3 +124,4 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+*/

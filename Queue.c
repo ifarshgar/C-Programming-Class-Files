@@ -1,47 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include <string.h>
 
-#define MAX 100
+#include "Queue.h"
 
-struct queue{
-    int top;
-    char values[MAX][100];
-} myQueue;
-
-void push(char *v)
-{
-    if(myQueue.top == MAX-1)
+void queue_push(char *v) {
+    if (myQueue.top == MAX - 1)
         printf("queue is full!\n\n");
-    else
-    {
+    else {
         myQueue.top++;
         strcpy(myQueue.values[myQueue.top], v);
     }
 }
 
-char * pop()
-{
-    if(myQueue.top <= -1)
-    {
+char * queue_pop() {
+    if (myQueue.top <= -1) {
         printf("queue is empty!\n\n");
         return "<empty>";
-    }
-    else
-    {
-        char *c = (char *) malloc(100*sizeof(char));
+    } else {
+        char *c = (char *) malloc(100 * sizeof(char));
         strcpy(c, myQueue.values[0]);
 
-        /*
-           this implementation of the queue data structure is not very efficient
-           due to the limitations that we have in simple arrays in C
-           A better approach is to use linked-lists
-           There is also another way, that is to use two pointers on the list. A head and a tail.
-           As of right now I have just implemented a simple functioning queue.
-        */
-        for(int i=0; i<myQueue.top; i++) {
-            strcpy(myQueue.values[i], myQueue.values[i+1]);
+        for (int i = 0; i < myQueue.top; i++) {
+            strcpy(myQueue.values[i], myQueue.values[i + 1]);
         }
         myQueue.top--;
 
@@ -49,21 +30,20 @@ char * pop()
     }
 }
 
-int size() {
+int queue_size() {
     return myQueue.top + 1;
 }
 
-void print()
-{
+void queue_print() {
     printf("Queue:\n");
     int i;
-    for(i=0;i <= myQueue.top; i++)
-    {
-        printf("%d- %s\n", i+1, myQueue.values[i]);
+    for (i = 0; i <= myQueue.top; i++) {
+        printf("%d- %s\n", i + 1, myQueue.values[i]);
     }
     printf("\n");
 }
 
+/*
 int main()
 {
     myQueue.top = -1;
@@ -112,26 +92,4 @@ int main()
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
