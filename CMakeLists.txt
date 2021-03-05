@@ -8,6 +8,6 @@ add_executable(C_Programming_Files
         Queue.h Queue.c
         Stack.h Stack.c
         "String Manipulation Sample Program.c"
-        File_Read_Write_Example.c File_Read_Write_Example.h
-        Person.h Person.c
+        FILE_IO/File_Read_Write_Example.h FILE_IO/File_Read_Write_Example.c
+        FILE_IO/Person.h FILE_IO/Person.c
         )
