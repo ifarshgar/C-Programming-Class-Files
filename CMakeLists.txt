@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(DataStructures C)
+project(C_Programming C)
 
 set(CMAKE_C_STANDARD 11)
 
